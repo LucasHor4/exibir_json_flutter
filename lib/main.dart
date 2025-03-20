@@ -20,9 +20,9 @@ List<testeClass> listaTeste = [
   ];
 
 class TelaInicial extends State<MainApp> {
-  @override
   int muda = 0; 
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(

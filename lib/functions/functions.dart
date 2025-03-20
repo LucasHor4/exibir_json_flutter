@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'dart:nativewrappers/_internal/vm/lib/ffi_native_type_patch.dart';
-import 'package:flutter/material.dart';
 
 //aq vai onde criamos a lógica para ver o json e passar ele para uma lista, depois exibir a lista no main.dart
 
