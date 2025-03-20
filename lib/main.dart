@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:exibir_json_flutter/functions/functions.dart';
 
 void main() {
   runApp(const MainApp());
@@ -17,7 +18,14 @@ class TelaInicial extends State<MainApp> {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('Teste de commit'),
+          child: ListView(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 12, bottom: 20),
+                child: Text('variavel 1'),
+              ),
+            ],
+          ),
         ),
       ),
     );
