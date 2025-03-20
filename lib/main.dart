@@ -12,18 +12,31 @@ class MainApp extends StatefulWidget {
   State<MainApp> createState() => TelaInicial();
 }
 
+List<testeClass> listaTeste = [
+    testeClass('Var 1'),
+    testeClass('Var 2'),
+    testeClass('Var 3'),
+    testeClass('Var 4'),
+  ];
+
 class TelaInicial extends State<MainApp> {
   @override
+  int muda = 0; 
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: ListView(
+          child: Column(
             children: [
               Container(
                 margin: EdgeInsets.only(top: 12, bottom: 20),
-                child: Text('variavel 1'),
+                child: Text(listaTeste[muda].nome),
               ),
+              ElevatedButton(onPressed: (){
+                //fazer if e else para caso atingir o maximo da capacidade ele voltar para 0
+                muda++;
+              }, child: Text('Mudar documentario'))
             ],
           ),
         ),
