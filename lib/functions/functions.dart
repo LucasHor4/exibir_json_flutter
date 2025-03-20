@@ -1,18 +1,39 @@
-import 'dart:nativewrappers/_internal/vm/lib/ffi_native_type_patch.dart';
 
 //aq vai onde criamos a lógica para ver o json e passar ele para uma lista, depois exibir a lista no main.dart
 
 class Documentarios{
-  late String docmnID;
   late String titulo;
   late String diretor;
-  late Double duracao;
+  late double duracao;
   late String lancamento;
+  late String subgeneros;
+  Documentarios(){
+    titulo = '';
+    diretor = '';
+    duracao = 0;
+    lancamento = '';
+    subgeneros = '';
 
-  Documentarios(this.docmnID, this.titulo, this.diretor, this.duracao, this.lancamento);
+  }
+  Documentarios.v(this.subgeneros, this.titulo, this.diretor, this.duracao, this.lancamento);
 
  Documentarios.fromJson(Map<String, dynamic> json) :
-  docmnID = json[/* nome do id no arqv json, o mesmo se repete com os outros*/ 0];
+  titulo = json['titulo'] as String,
+  diretor = json['diretor'] as String,
+  duracao = json['duracao'] as double,
+  lancamento = json['ano'] as String,
+  subgeneros = json['subgeneros'] as String;
+
+   Map<String, dynamic> toJson() => {
+    'titulo' : titulo,
+    'diretor' : diretor,
+    'duracao' : duracao,
+    'ano' : lancamento,
+    'subgeneros' : subgeneros,
+   };
+
+
+
 }
 
 
