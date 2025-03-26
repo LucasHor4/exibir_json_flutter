@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:exibir_json_flutter/functions/functions.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'dart:math';
+import 'dart:convert';
 
 void main() {
   runApp(const MainApp());
@@ -14,15 +16,9 @@ class MainApp extends StatefulWidget {
   State<MainApp> createState() => TelaInicial();
 }
 
-List<testeClass> listaTeste = [
-    testeClass('Var 1'),
-    testeClass('Var 2'),
-    testeClass('Var 3'),
-    testeClass('Var 4'),
-  ];
 
 class TelaInicial extends State<MainApp> {
-  int muda = 0; 
+  int muda = 0;
   int total = 0; 
   List<Documentarios> docList = List.empty();
 
@@ -38,6 +34,12 @@ class TelaInicial extends State<MainApp> {
   }
 
   @override
+   initState()  {
+    super.initState();
+       readJson();
+    }
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -48,9 +50,10 @@ class TelaInicial extends State<MainApp> {
                 margin: EdgeInsets.only(top: 12, bottom: 20),
                 child: Text(docList[muda].titulo),
               ),
+              Text(docList[0].titulo),
               ElevatedButton(onPressed: (){
                 //fazer if e else para caso atingir o maximo da capacidade ele voltar para 0
-                muda++;
+                
               }, child: Text('Mudar documentario'))
             ],
           ),

@@ -5,140 +5,140 @@
         "ano": 2020,
         "diretor": "Jeff Orlowski",
         "duracao": 94,
-        "subgeneros": ["Tecnologia", "Sociedade"]
+        "subgeneros": "Tecnologia e Sociedade"
       },
       {
         "titulo": "Blackfish",
         "ano": 2013,
         "diretor": "Gabriela Cowperthwaite",
         "duracao": 83,
-        "subgeneros": ["Animais", "Investigativo"]
+        "subgeneros": "Animais e Investigativo"
       },
       {
         "titulo": "Making a Murderer",
         "ano": 2015,
         "diretor": "Moira Demos, Laura Ricciardi",
         "duracao": 468,
-        "subgeneros": ["Crime", "Justiça"]
+        "subgeneros": "Crime e Justiça"
       },
       {
         "titulo": "13th",
         "ano": 2016,
         "diretor": "Ava DuVernay",
         "duracao": 100,
-        "subgeneros": ["Política", "História"]
+        "subgeneros": "Política e História"
       },
       {
         "titulo": "Won't You Be My Neighbor?",
         "ano": 2018,
         "diretor": "Morgan Neville",
         "duracao": 94,
-        "subgeneros": ["Biografia", "Cultura"]
+        "subgeneros": "Biografia e Cultura"
       },
       {
         "titulo": "Senna",
         "ano": 2010,
         "diretor": "Asif Kapadia",
         "duracao": 106,
-        "subgeneros": ["Esportes", "Biografia"]
+        "subgeneros": "Esportes e Biografia"
       },
       {
         "titulo": "Free Solo",
         "ano": 2018,
         "diretor": "Elizabeth Chai Vasarhelyi, Jimmy Chin",
         "duracao": 100,
-        "subgeneros": ["Aventura", "Esportes"]
+        "subgeneros": "Aventura e Esportes"
       },
       {
         "titulo": "Cowspiracy",
         "ano": 2014,
         "diretor": "Kip Andersen, Keegan Kuhn",
         "duracao": 90,
-        "subgeneros": ["Meio Ambiente", "Investigativo"]
+        "subgeneros": "Meio Ambiente e Investigativo"
       },
       {
         "titulo": "The Act of Killing",
         "ano": 2012,
         "diretor": "Joshua Oppenheimer",
         "duracao": 115,
-        "subgeneros": ["História", "Política"]
+        "subgeneros": "História e Política"
       },
       {
         "titulo": "The Cove",
         "ano": 2009,
         "diretor": "Louie Psihoyos",
         "duracao": 92,
-        "subgeneros": ["Investigativo", "Animais"]
+        "subgeneros": "Investigativo e Animais"
       },
       {
         "titulo": "Icarus",
         "ano": 2017,
         "diretor": "Bryan Fogel",
         "duracao": 121,
-        "subgeneros": ["Esportes", "Investigativo"]
+        "subgeneros": "Esportes e Investigativo"
       },
       {
         "titulo": "Fahrenheit 9/11",
         "ano": 2004,
         "diretor": "Michael Moore",
         "duracao": 122,
-        "subgeneros": ["Política", "História"]
+        "subgeneros": "Política e História"
       },
       {
         "titulo": "Won't You Be My Neighbor?",
         "ano": 2018,
         "diretor": "Morgan Neville",
         "duracao": 94,
-        "subgeneros": ["Biografia", "Cultura"]
+        "subgeneros": "Biografia e Cultura"
       },
       {
         "titulo": "Inside Job",
         "ano": 2010,
         "diretor": "Charles Ferguson",
         "duracao": 109,
-        "subgeneros": ["Economia", "Investigativo"]
+        "subgeneros": "Economia e Investigativo"
       },
       {
         "titulo": "The Fog of War",
         "ano": 2003,
         "diretor": "Errol Morris",
         "duracao": 107,
-        "subgeneros": ["História", "Guerra"]
+        "subgeneros": "História e Guerra"
       },
       {
         "titulo": "Man on Wire",
         "ano": 2008,
         "diretor": "James Marsh",
         "duracao": 94,
-        "subgeneros": ["Aventura", "Biografia"]
+        "subgeneros": "Aventura e Biografia"
       },
       {
         "titulo": "Amy",
         "ano": 2015,
         "diretor": "Asif Kapadia",
         "duracao": 128,
-        "subgeneros": ["Música", "Biografia"]
+        "subgeneros": "Música e Biografia"
       },
       {
         "titulo": "Bowling for Columbine",
         "ano": 2002,
         "diretor": "Michael Moore",
         "duracao": 120,
-        "subgeneros": ["Política", "Sociedade"]
+        "subgeneros": "Política e Sociedade"
       },
       {
         "titulo": "Grizzly Man",
         "ano": 2005,
         "diretor": "Werner Herzog",
         "duracao": 103,
-        "subgeneros": ["Natureza", "Biografia"]
+        "subgeneros": "Natureza e Biografia"
       },
       {
         "titulo": "Jiro Dreams of Sushi",
         "ano": 2011,
         "diretor": "David Gelb",
         "duracao": 81,
-        "subgeneros": ["Gastronomia", "Biografia"]
+        "subgeneros": "Gastronomia e Biografia"
       }
     ]
   }

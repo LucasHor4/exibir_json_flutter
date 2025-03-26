@@ -5,13 +5,13 @@ class Documentarios{
   late String titulo;
   late String diretor;
   late double duracao;
-  late String lancamento;
+  late double lancamento;
   late String subgeneros;
   Documentarios(){
     titulo = '';
     diretor = '';
     duracao = 0;
-    lancamento = '';
+    lancamento = 0;
     subgeneros = '';
 
   }
@@ -21,7 +21,7 @@ class Documentarios{
   titulo = json['titulo'] as String,
   diretor = json['diretor'] as String,
   duracao = json['duracao'] as double,
-  lancamento = json['ano'] as String,
+  lancamento = json['ano'] as double,
   subgeneros = json['subgeneros'] as String;
 
    Map<String, dynamic> toJson() => {
@@ -31,15 +31,4 @@ class Documentarios{
     'ano' : lancamento,
     'subgeneros' : subgeneros,
    };
-
-
-
-}
-
-
-class testeClass{
-  late String nome;
-
-  testeClass( this.nome);
-
 }
