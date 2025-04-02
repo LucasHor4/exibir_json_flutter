@@ -20,18 +20,7 @@ class MainApp extends StatefulWidget {
 class TelaInicial extends State<MainApp> {
   int muda = 0;
   int total = 0; 
-  List<Documentarios> docList = List.empty();
-
-  Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/documentarios.json');
-     Iterable data = await json.decode(response);
-    docList =  List<Documentarios>.from(data.map((model)=> Documentarios.fromJson(model)));
-    total = docList.length;
-    setState(() {
-      docList;
-      total;
-    });
-  }
+  List<dynamic> docList = [];
 
   @override
    initState()  {
@@ -39,9 +28,23 @@ class TelaInicial extends State<MainApp> {
        readJson();
     }
 
+  Future<void> readJson() async {
+    final String jsonString = await rootBundle.loadString('assets/documentarios.json');
+   // final List<dynamic> jsonResponse = json.decode(jsonString);
+     Iterable data = await json.decode(jsonString);
+    docList =  List<dynamic>.from(data.map((model)=> Documentarios.fromJson(model)));
+    total = docList.length;
+    setState(() {
+      docList ;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  docList.isEmpty ?
+    const Center(child: CircularProgressIndicator()) 
+    : MaterialApp(
       home: Scaffold(
         body: Center(
           child: Column(
@@ -50,9 +53,31 @@ class TelaInicial extends State<MainApp> {
                 margin: EdgeInsets.only(top: 12, bottom: 20),
                 child: Text(docList[muda].titulo),
               ),
-              Text(docList[0].titulo),
+              Container(
+                margin: EdgeInsets.only(top: 12, bottom: 20),
+                child: Text(docList[muda].lancamento),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 12, bottom: 20),
+                child: Text(docList[muda].diretor),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 12, bottom: 20),
+                child: Text(docList[muda].duracao),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 12, bottom: 20),
+                child: Text(docList[muda].subgeneros),
+              ),
+              
               ElevatedButton(onPressed: (){
                 //fazer if e else para caso atingir o maximo da capacidade ele voltar para 0
+                if(muda == total){
+                  muda = 0;
+                }else{
+                  muda++;
+                }
+
                 
               }, child: Text('Mudar documentario'))
             ],
