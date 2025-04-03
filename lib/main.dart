@@ -35,7 +35,8 @@ class TelaInicial extends State<MainApp> {
     docList =  List<dynamic>.from(data.map((model)=> Documentarios.fromJson(model)));
     total = docList.length;
     setState(() {
-      docList ;
+      docList;
+      total;
     });
   }
 
@@ -50,35 +51,37 @@ class TelaInicial extends State<MainApp> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(top: 12, bottom: 20),
+                margin: EdgeInsets.only(top: 3, bottom: 3),
                 child: Text(docList[muda].titulo),
               ),
               Container(
-                margin: EdgeInsets.only(top: 12, bottom: 20),
-                child: Text(docList[muda].lancamento),
+                margin: EdgeInsets.only(top: 3, bottom: 3),
+                child: Text((docList[muda].lancamento).toString()),
               ),
               Container(
-                margin: EdgeInsets.only(top: 12, bottom: 20),
+                margin: EdgeInsets.only(top: 3, bottom: 3),
                 child: Text(docList[muda].diretor),
               ),
               Container(
-                margin: EdgeInsets.only(top: 12, bottom: 20),
-                child: Text(docList[muda].duracao),
+                margin: EdgeInsets.only(top: 3, bottom: 3),
+                child: Text((docList[muda].duracao).toString()),
               ),
               Container(
-                margin: EdgeInsets.only(top: 12, bottom: 20),
+                margin: EdgeInsets.only(top: 3, bottom: 3),
                 child: Text(docList[muda].subgeneros),
               ),
               
               ElevatedButton(onPressed: (){
                 //fazer if e else para caso atingir o maximo da capacidade ele voltar para 0
-                if(muda == total){
-                  muda = 0;
+                if(muda ==  (total - 1)){
+                  setState(() {
+                    muda = 0;
+                  });
                 }else{
-                  muda++;
+                  setState(() {
+                    muda = muda + 1;
+                  });
                 }
-
-                
               }, child: Text('Mudar documentario'))
             ],
           ),
